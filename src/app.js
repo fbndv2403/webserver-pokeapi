@@ -8,20 +8,20 @@ app.set("view engine", "hbs");
 
 app.use(express.static("./src/public"));
 
-app.get("/", (req, res) => {
-  res.render("home");
-});
+// app.get("/", (req, res) => {
+//   res.render("home");
+// });
 
-app.get("/elements", (req, res) => {
-  res.sendFile(__dirname + "/public/elements.html");
-});
+// app.get("/elements", (req, res) => {
+//   res.sendFile(__dirname + "/public/elements.html");
+// });
 
-app.get("/generic", (req, res) => {
-  res.sendFile(__dirname + "/public/generic.html");
-});
+// app.get("/generic", (req, res) => {
+//   res.sendFile(__dirname + "/public/generic.html");
+// });
 
 app.get("*", (req, res) => {
-  res.render("404");
+  res.send("404 | Page Not Found");
 });
 
 app.listen(port, () => {
