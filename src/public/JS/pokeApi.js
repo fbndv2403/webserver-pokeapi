@@ -16,7 +16,6 @@ function generateCharacterTemplate(item) {
     `;
 }
 
-
 const modal = (item) => {
   return `
   
@@ -52,14 +51,14 @@ const modal = (item) => {
   ${item.name}
   </button>
 
-    `
-}
+    `;
+};
 
 const iterarPokemon = () => {
-  for (let i = 1; i <800; i++) {
+  for (let i = 1; i < 100; i++) {
     fetchApi(i);
   }
-}
+};
 
 const charactersDom = document.querySelector(".panel");
 
@@ -73,8 +72,8 @@ const fetchApi = async (index) => {
       id: data.id,
       height: data.height,
       weight: data.weight,
-      type: data.types.map(type => type.type.name),
-      imgsecu: data.sprites.front_default
+      type: data.types.map((type) => type.type.name),
+      imgsecu: data.sprites.front_default,
     };
     charactersDom.innerHTML += generateCharacterTemplate(pokemon);
   } catch (error) {
