@@ -13,4 +13,6 @@ function presionar(){
     }
 }
 
- window.onload = presionar()
+
+    window.onload = presionar()
+

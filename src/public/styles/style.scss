@@ -121,16 +121,19 @@ $blanco: #F2F4E8;
         overflow: scroll;
         overflow-x: hidden;
 
-        &::-webkit-scrollbar-thumb{
-
-        }
+        .contenedor{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: $secundario ;
+            margin: 20px 10px 10px 10px;
 
         .card{
             z-index: 4;
             width: 150px;
             height: 200px;
             background: #cfe8eed3;
-            margin: 20px 10px 20px 10px;
             border-radius: 3px;
             
             img{
@@ -139,20 +142,88 @@ $blanco: #F2F4E8;
                 width: 100%;
 
             }
-            
-            h2{
-                margin: 0;
-                padding: 0;
-                font-family: monserrat;
-                font-size: 1.2rem;
-                margin-top: -10px;
-                color: #000000;
-                text-align: center;
+        }
+    }
+}
 
-            }
+    #botonpoke{
+        margin: 0;
+        padding: 0;
+        font-family: monserrat;
+        font-size: 1.2rem;
+        margin-top: -10px;
+        color: #000000;
+        text-align: center;
+        border: 0;
+        background-color: transparent;
+        width: 100%;
 
+        &#botonpoke:first-letter{
+            text-transform: uppercase;
+        }
+
+    }
+
+    .modal-header {
+        display: flex;
+        flex-shrink: 0;
+        align-items: center;
+        text-transform: uppercase;
+        /* justify-content: center; */
+        padding: 1rem 1rem;
+        /* border-bottom: 1px solid #dee2e6; */
+        border-top-left-radius: calc(0.3rem - 1px);
+        border-top-right-radius: calc(0.3rem - 1px);
+        /* font-family: 'pokemon'; */
+        letter-spacing: 6px;
+        border-bottom: 0px solid #dee2e6;
+
+        .modal-title {
+            margin-bottom: 0;
+            line-height: 1.5;
+            margin-left: 15px;
+        }
+
+    }
+
+    .circulo{
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        #juegoimg{
+
+            width: 150px;
+            height: 150px;
         }
     }
 
+    .list-group-item-dark {
+        color: $blanco;
+        background-color: transparent;
+        border: 1px solid $secundario;
+        font-family: monospace;
+    }
+    .list-group-flush {
+        border-radius: 5px;
+        margin: 2px;
+    }
+    .list-group-flush > .list-group-item  {
+        border: 1px solid $secundario;
+    }
 
+    .list-group-flush > .list-group-item:last-child {
+         border-bottom-width: 2px; 
+    }
+}
+
+.modal-backdrop {
+    position: inherit;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 0%;
+    height: 0%;
+    background-color: #000;
 }

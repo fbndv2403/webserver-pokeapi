@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,31 +8,39 @@
     <title>Pokedex</title>
     <link rel="stylesheet" href="./styles/normalize.css">
     <link rel="stylesheet" href="./styles/style.css">
-     <link rel="stylesheet" href="boxicons.min.css">
-     <link rel="stylesheet"href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-     <link rel="shortcut icon" href="./theme/images/Pokebola.png" type="image/x-icon">
-      
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="shortcut icon" href="./theme/images/Pokebola.png" type="image/x-icon">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./styles/style.css">
+
+
 </head>
+
 <body>
 
     <main>
         <div class="nav">
             <h1>POKEDEX</h1>
-            <audio  id="music"src="./theme/music/PokeMusic.mp3"></audio>
+            <audio id="music" src="./theme/music/PokeMusic.mp3"></audio>
             <button id="boton" onclick="presionar()"><i class='bx bxs-music'></i></button>
         </div>
-        <div class="rest">                  
+        <div class="rest">
             <div class="pokedex">
                 <div class="panel">
+                    
+                    </div>
                 </div>
             </div>
             <div class="line"></div>
             <div class="line"></div>
             <div class="line"></div>
         </div>
+        
     </main>
-    <script src="./JS/pokeApi.js" ></script>
-    <script src="./JS/musica.js" ></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="./JS/pokeApi.js"></script>
+        <script src="./JS/musica.js"></script>
 
 </body>
+
 </html>
